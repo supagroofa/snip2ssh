@@ -1,3 +1,5 @@
+<p align="center"><img src="icon.png" width="128" alt="snip2ssh icon"></p>
+
 # snip2ssh
 
 Take a screenshot on Windows and get it onto a remote Linux/macOS box in one
