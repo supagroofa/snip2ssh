@@ -37,14 +37,17 @@ Other parameters: `-RemoteDir` (default `/tmp`), `-TimeoutSeconds` (snip only, d
 
 ## Icon
 
-The shortcuts use `snip2ssh.ico` (a green `>` that doubles as scissors, with a `_` cursor). To use your own,
-pass any `file.dll,index` or a path to a `.ico`:
+Two icons ship with the repo: `snip2ssh.ico` (bold, no background, for the Start Menu, taskbar and hotkeys) and
+`snip2ssh-desktop.ico` (same artwork on a dark tile, for Desktop shortcuts). Override them with any `file.dll,index`
+or `.ico` path:
 
 ```powershell
-powershell -File install-shortcuts.ps1 -Target user@host -Desktop -Icon "C:\icons\party-parrot.ico"
+powershell -File install-shortcuts.ps1 -Target user@host -Desktop -Icon "C:\icons\a.ico" -DesktopIcon "C:\icons\b.ico"
 ```
 
-Browse the built-in icons via a shortcut's *Properties → Change Icon* (try `shell32.dll` or `imageres.dll`).
+To pin to the taskbar, pin the **Start Menu** shortcut so it keeps the bold icon. Windows caches shortcut icons;
+if a changed icon does not show up, reset the icon cache (delete `%LOCALAPPDATA%\IconCache.db` and
+`%LOCALAPPDATA%\Microsoft\Windows\Explorer\iconcache*`, then restart Explorer).
 
 ## Caveats
 
