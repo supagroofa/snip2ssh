@@ -35,8 +35,8 @@ Other parameters: `-RemoteDir` (default `/tmp`), `-TimeoutSeconds` (snip only, d
 
 ## Icon
 
-`install-shortcuts.ps1 -Icon` takes any `file.dll,index` or a path to a `.ico`,
-so pick something that makes you smile:
+The shortcuts use `snip2ssh.ico` (a green `>` that doubles as scissors, with a `_` cursor). To use your own,
+pass any `file.dll,index` or a path to a `.ico`:
 
 ```powershell
 powershell -File install-shortcuts.ps1 -Target user@host -Desktop -Icon "C:\icons\party-parrot.ico"

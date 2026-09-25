@@ -3,7 +3,7 @@
 #   powershell -File install-shortcuts.ps1 -Target user@host
 param(
     [string]$Target = $env:SNIP2SSH_HOST,
-    [string]$Icon = 'shell32.dll,45',   # 'file.dll,index' or a path to a .ico
+    [string]$Icon = "$PSScriptRoot\snip2ssh.ico",   # 'file.dll,index' or a path to a .ico
     [switch]$Desktop                    # also create Desktop shortcuts
 )
 if (-not $Target) { Write-Error 'No host: pass -Target user@host or set SNIP2SSH_HOST'; exit 1 }
